@@ -1,9 +1,15 @@
+
 document.addEventListener('DOMContentLoaded', async () => {
-    const linksList = document.getElementById('linksList');
+//    const linksList = document.getElementById('linksList');
+
+    const log = chrome.extension.getBackgroundPage().console.log;
+    // log('something')
 
     // const addr = address.value;
-    const btn = document.getElementById('btn');
-    console.log('address', address);
+    const btn = document.querySelector('#make_wallet_btn');
+    // console.log('btn', btn);
+    log('btn', btn);
+    // chrome.extension.getBackgroundPage().console.log('btn', btn);
 
     // const getValueInput = () =>{
     //     let inputValue = document.getElementById("domTextElement").value; 
@@ -35,11 +41,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         }).join('');
 
         linksList.innerHTML = makeHtml;
-        //     const videoLinks = [...document.querySelectorAll('.video-link')];
-        //     videoLinks.forEach((link) => link.addEventListener('click', copy));
 
     }
-
-
-    btn.addEventListener('click', getTx);
+    // btn.addEventListener('click', getTx);
 })
